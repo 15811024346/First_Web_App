@@ -1,17 +1,13 @@
 package main
 
-import (
-	log "./utils/log"
-	"time"
-)
+import "github.com/gin-gonic/gin"
 
 func main() {
-	for {
-
-		log.Debug("11111111")
-		log.Release("11111")
-		time.Sleep(time.Second * 2)
-
-		//log.Fatal("11111111")
-	}
+	r := gin.Default()
+	r.GET("/hello", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "hello world",
+		})
+	})
+	r.Run()
 }

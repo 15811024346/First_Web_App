@@ -17,5 +17,4 @@ func main() {
 	util.From_Db_Insert("王五", 22)
 	util.From_Db_Select(0)
 	util.From_Db_Deleat(1)
-
 }
